@@ -1,17 +1,515 @@
-<!doctype html>
-<html lang="en" class="scroll-smooth dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SCISSOR Unisex Salon | Your Style. Your Signature.</title>
-    <meta name="description" content="SCISSOR Unisex Salon - Premium Hair, Beauty & Grooming Experience for Men & Women in Kasia, Kushinagar." />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  </head>
-  <body class="bg-[#0b0b0d] text-neutral-100 font-sans antialiased selection:bg-[#B91C1C] selection:text-white overflow-x-hidden">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCISSOR Unisex Salon | Your Style. Your Signature.</title>
+  <meta name="description" content="SCISSOR Unisex Salon - Premium Hair, Beauty, Bridal & Grooming in Kasia, Kushinagar.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-[#0b0b0d] text-neutral-100 font-sans antialiased selection:bg-[#B91C1C] selection:text-white overflow-x-hidden">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-[#121216] border-b border-neutral-800/80 text-[11px] sm:text-xs py-2 px-4 text-neutral-300">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-4">
+        <span class="flex items-center gap-1.5 text-neutral-300">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-[#dfb776]"></i>
+          <span>Kasia Bypass Road, Opp. SBI ATM, Kushinagar</span>
+        </span>
+        <span class="hidden md:flex items-center gap-1.5 text-neutral-300">
+          <i data-lucide="clock" class="w-3.5 h-3.5 text-[#dfb776]"></i>
+          <span>08:00 AM - 09:00 PM (Daily Open)</span>
+        </span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://maps.google.com/?q=Kasia+Kushinagar+Uttar+Pradesh" target="_blank" class="text-neutral-400 hover:text-[#dfb776] hidden sm:flex items-center gap-1">
+          <i data-lucide="navigation" class="w-3 h-3 text-[#dfb776]"></i>
+          <span>Get Directions</span>
+        </a>
+        <a href="tel:+918318248504" class="text-[#dfb776] hover:underline font-semibold flex items-center gap-1.5">
+          <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+          <span>+91 83182 48504</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navbar -->
+  <header class="sticky top-0 z-40 bg-[#0b0b0d]/95 backdrop-blur-md border-b border-neutral-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2.5 sm:gap-3 group">
+        <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-[#1c1a17] border border-[#dfb776]/50 flex items-center justify-center shadow-[0_0_15px_rgba(223,183,118,0.25)] group-hover:border-[#dfb776] transition-colors">
+          <i data-lucide="scissors" class="w-4 h-4 sm:w-5 sm:h-5 text-[#dfb776]"></i>
+        </div>
+        <div>
+          <span class="text-lg sm:text-2xl font-bold tracking-wider font-cinzel text-white block leading-none">SCISSOR</span>
+          <span class="text-[9px] sm:text-[10px] tracking-[0.25em] text-[#dfb776] uppercase font-bold">UNISEX SALON</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-7 lg:gap-8 text-sm font-medium">
+        <a href="#services-beauty" class="text-neutral-300 hover:text-[#dfb776] transition-colors py-2">Beauty & Spa</a>
+        <a href="#services-hair" class="text-neutral-300 hover:text-[#dfb776] transition-colors py-2">Hair & Grooming</a>
+        <a href="#about" class="text-neutral-300 hover:text-[#dfb776] transition-colors py-2">About Us</a>
+        <a href="#gallery" class="text-neutral-300 hover:text-[#dfb776] transition-colors py-2">Studio Gallery</a>
+        <a href="#contact" class="text-neutral-300 hover:text-[#dfb776] transition-colors py-2">Contact</a>
+      </nav>
+
+      <!-- CTA -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="https://wa.me/918318248504" target="_blank" class="w-10 h-10 rounded-xl bg-[#1a1a20] hover:bg-[#25D366]/20 border border-neutral-800 hover:border-[#25D366]/50 flex items-center justify-center text-[#25D366] transition-all">
+          <i data-lucide="message-circle" class="w-5 h-5"></i>
+        </a>
+        <button onclick="openBookingModal()" class="bg-[#B91C1C] hover:bg-[#a01818] text-white text-xs sm:text-sm font-bold tracking-wider px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl shadow-[0_0_20px_rgba(185,28,28,0.5)] border border-red-500/70 transition-all duration-300 cursor-pointer flex items-center gap-2">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span>BOOK NOW</span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button onclick="toggleMobileMenu()" class="md:hidden text-neutral-300 hover:text-white p-2">
+        <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="md:hidden bg-[#111116] border-b border-neutral-800 px-4 py-5 hidden space-y-3.5">
+      <a href="#services-beauty" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-neutral-300 hover:text-[#dfb776]">Beauty & Spa</a>
+      <a href="#services-hair" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-neutral-300 hover:text-[#dfb776]">Hair & Grooming</a>
+      <a href="#about" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-neutral-300 hover:text-[#dfb776]">About Us</a>
+      <a href="#gallery" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-neutral-300 hover:text-[#dfb776]">Studio Gallery</a>
+      <a href="#contact" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-neutral-300 hover:text-[#dfb776]">Contact</a>
+      <button onclick="toggleMobileMenu(); openBookingModal();" class="w-full bg-[#B91C1C] text-white py-3 rounded-xl font-bold text-xs tracking-wider flex items-center justify-center gap-2">
+        <i data-lucide="calendar" class="w-4 h-4"></i>
+        <span>BOOK APPOINTMENT</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section (Mobile Font Sizes Optimized) -->
+  <section class="relative min-h-[75vh] sm:min-h-[85vh] flex items-center justify-center py-12 sm:py-20 px-4 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=1920&q=80" alt="SCISSOR Unisex Salon Interior" class="w-full h-full object-cover object-center brightness-[0.38] contrast-[1.08]">
+      <div class="absolute inset-0 bg-gradient-to-t from-[#0b0b0d] via-[#0b0b0d]/60 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-[#0b0b0d]/90 via-[#0b0b0d]/50 to-transparent"></div>
+      <div class="absolute top-1/4 right-1/4 w-72 sm:w-96 h-72 sm:h-96 bg-[#dfb776]/15 rounded-full blur-3xl pointer-events-none animate-pulse-glow"></div>
+      <div class="absolute bottom-1/3 left-1/4 w-72 sm:w-96 h-72 sm:h-96 bg-[#B91C1C]/20 rounded-full blur-3xl pointer-events-none"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-2 sm:px-4 w-full">
+      <div class="max-w-3xl">
+        
+        <!-- Eyebrow Badge -->
+        <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-[#181613]/90 border border-[#dfb776]/40 shadow-[0_0_20px_rgba(223,183,118,0.25)] mb-3 sm:mb-5">
+          <i data-lucide="sparkles" class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#dfb776]"></i>
+          <span class="text-[9px] sm:text-[11px] font-bold tracking-[0.2em] sm:tracking-[0.25em] text-[#dfb776] uppercase">WELCOME TO SCISSOR SALON</span>
+        </div>
+
+        <!-- Headline (Controlled Mobile Size) -->
+        <h1 class="text-3xl sm:text-5xl md:text-7xl font-bold tracking-tight text-white font-display leading-[1.12] sm:leading-[1.08] mb-3.5 sm:mb-5">
+          Your Style. <br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#dfb776] via-[#f7e0b5] to-[#dfb776] drop-shadow-[0_0_35px_rgba(223,183,118,0.35)]">Your Signature.</span>
+        </h1>
+
+        <!-- Subtitle (Clean & Legible) -->
+        <p class="text-xs sm:text-base md:text-lg text-neutral-300 font-normal leading-relaxed mb-6 sm:mb-8 max-w-xl">
+          Premium unisex salon offering luxury hair styling, advanced beauty treatments, skin rejuvenation, and grooming excellence in Kasia, Kushinagar.
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="flex flex-wrap items-center gap-3 sm:gap-4 mb-6 sm:mb-10">
+          <button onclick="openBookingModal()" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#B91C1C] hover:bg-[#a01818] text-white text-xs sm:text-sm font-bold tracking-wider px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl shadow-[0_0_25px_rgba(185,28,28,0.55)] border border-red-500/70 transition-all duration-300 cursor-pointer">
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+            <span>BOOK APPOINTMENT</span>
+          </button>
+          <a href="tel:+918318248504" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#17171b]/90 hover:bg-[#222228] text-neutral-200 hover:text-white text-xs sm:text-sm font-semibold tracking-wider px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl border border-neutral-700/80 hover:border-[#dfb776]/50 transition-all duration-300">
+            <i data-lucide="phone" class="w-4 h-4 text-[#dfb776]"></i>
+            <span>CALL SALON</span>
+          </a>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="flex flex-wrap items-center gap-4 sm:gap-6 pt-3 sm:pt-4 border-t border-neutral-800/80 text-[11px] sm:text-sm text-neutral-300">
+          <div class="flex items-center gap-1.5 sm:gap-2">
+            <div class="flex text-[#dfb776]">
+              <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-[#dfb776]"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-[#dfb776]"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-[#dfb776]"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-[#dfb776]"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-[#dfb776]"></i>
+            </div>
+            <span class="font-bold text-white">4.9/5 Rating</span>
+            <span class="text-neutral-400">(500+ Happy Clients)</span>
+          </div>
+          <div class="flex items-center gap-1.5 text-neutral-400">
+            <i data-lucide="shield-check" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#dfb776]"></i>
+            <span>100% Sanitized</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Highlight Bar -->
+  <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 sm:-mt-8">
+    <div class="bg-[#141418]/95 backdrop-blur-md border border-neutral-800/90 rounded-2xl p-4 sm:p-7 shadow-2xl shadow-black/90">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+        <div class="flex items-start gap-3.5 sm:gap-4">
+          <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#202026] border border-[#dfb776]/20 flex items-center justify-center shrink-0 text-[#dfb776]">
+            <i data-lucide="scissors" class="w-4 h-4 sm:w-5 sm:h-5"></i>
+          </div>
+          <div>
+            <h3 class="text-xs sm:text-sm font-bold tracking-wider text-white uppercase mb-0.5 sm:mb-1">EXPERT STYLISTS</h3>
+            <p class="text-[11px] sm:text-xs text-neutral-400">Certified professionals trained in modern trends.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3.5 sm:gap-4">
+          <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#202026] border border-[#dfb776]/20 flex items-center justify-center shrink-0 text-[#dfb776]">
+            <i data-lucide="sparkles" class="w-4 h-4 sm:w-5 sm:h-5"></i>
+          </div>
+          <div>
+            <h3 class="text-xs sm:text-sm font-bold tracking-wider text-white uppercase mb-0.5 sm:mb-1">PREMIUM PRODUCTS</h3>
+            <p class="text-[11px] sm:text-xs text-neutral-400">Top-tier international salon care brands.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3.5 sm:gap-4">
+          <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#202026] border border-[#dfb776]/20 flex items-center justify-center shrink-0 text-[#dfb776]">
+            <i data-lucide="shield-check" class="w-4 h-4 sm:w-5 sm:h-5"></i>
+          </div>
+          <div>
+            <h3 class="text-xs sm:text-sm font-bold tracking-wider text-white uppercase mb-0.5 sm:mb-1">HYGIENIC & CLEAN</h3>
+            <p class="text-[11px] sm:text-xs text-neutral-400">Sterilized tools & pristine environment.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3.5 sm:gap-4">
+          <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#202026] border border-[#dfb776]/20 flex items-center justify-center shrink-0 text-[#dfb776]">
+            <i data-lucide="heart" class="w-4 h-4 sm:w-5 sm:h-5"></i>
+          </div>
+          <div>
+            <h3 class="text-xs sm:text-sm font-bold tracking-wider text-white uppercase mb-0.5 sm:mb-1">UNISEX EXPERIENCE</h3>
+            <p class="text-[11px] sm:text-xs text-neutral-400">Tailored styling for both men & women.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Beauty Parlour Section -->
+  <section id="services-beauty" class="py-14 sm:py-20 border-b border-neutral-900/80 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4 sm:gap-6 mb-8 sm:mb-10">
+        <div>
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1c1a17] border border-[#dfb776]/30 mb-2 sm:mb-3">
+            <i data-lucide="sparkles" class="w-3 h-3 text-[#dfb776]"></i>
+            <span class="text-[10px] sm:text-[11px] font-bold tracking-[0.2em] text-[#dfb776] uppercase">BEAUTY PARLOUR & SPA</span>
+          </div>
+          <h2 class="text-2xl sm:text-4xl md:text-5xl font-bold font-display text-white tracking-tight">
+            Beauty, Skin & <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#dfb776] via-[#f5deb3] to-[#dfb776]">Spa Elegance</span>
+          </h2>
+          <p class="text-xs sm:text-sm text-neutral-400 mt-1.5 sm:mt-2 max-w-xl">
+            Facials, nail artistry, lash lifts, bridal transformations, waxing, and rejuvenating skin therapies.
+          </p>
+        </div>
+
+        <!-- Filter tabs -->
+        <div class="flex flex-wrap items-center gap-1.5 sm:gap-2" id="beauty-filter-container">
+          <button onclick="filterBeautyServices('all', event)" class="beauty-filter-btn px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-semibold bg-[#dfb776] text-black transition-all cursor-pointer">All Beauty</button>
+          <button onclick="filterBeautyServices('Facials', event)" class="beauty-filter-btn px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-semibold bg-[#17171d] text-neutral-400 hover:text-white border border-neutral-800 transition-all cursor-pointer">Facials</button>
+          <button onclick="filterBeautyServices('Nails & Lashes', event)" class="beauty-filter-btn px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-semibold bg-[#17171d] text-neutral-400 hover:text-white border border-neutral-800 transition-all cursor-pointer">Nails & Lashes</button>
+          <button onclick="filterBeautyServices('Bridal & Spa', event)" class="beauty-filter-btn px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-semibold bg-[#17171d] text-neutral-400 hover:text-white border border-neutral-800 transition-all cursor-pointer">Bridal</button>
+        </div>
+      </div>
+
+      <!-- Beauty Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5" id="beauty-services-grid"></div>
+
+      <!-- Show All Toggle -->
+      <div class="mt-8 sm:mt-10 flex flex-col items-center justify-center">
+        <button id="toggle-beauty-btn" onclick="toggleBeautyServices()" class="inline-flex items-center gap-2 px-6 sm:px-7 py-2.5 sm:py-3 rounded-full bg-[#18181f] hover:bg-[#22222c] border border-[#dfb776]/40 text-white text-xs sm:text-sm font-bold tracking-wider shadow-lg transition-all cursor-pointer">
+          <i data-lucide="sparkles" class="w-4 h-4 text-[#dfb776]"></i>
+          <span id="toggle-beauty-text">SHOW ALL BEAUTY SERVICES</span>
+          <i data-lucide="chevron-down" id="toggle-beauty-icon" class="w-4 h-4 text-[#dfb776]"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hair & Grooming Section -->
+  <section id="services-hair" class="py-14 sm:py-20 border-b border-neutral-900/80 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4 sm:gap-6 mb-8 sm:mb-10">
+        <div>
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1c1a17] border border-[#dfb776]/30 mb-2 sm:mb-3">
+            <i data-lucide="scissors" class="w-3 h-3 text-[#dfb776]"></i>
+            <span class="text-[10px] sm:text-[11px] font-bold tracking-[0.2em] text-[#dfb776] uppercase">HAIRSTYLING & GROOMING</span>
+          </div>
+          <h2 class="text-2xl sm:text-4xl md:text-5xl font-bold font-display text-white tracking-tight">
+            Hair, Beard & <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#dfb776] via-[#f5deb3] to-[#dfb776]">Styling Excellence</span>
+          </h2>
+          <p class="text-xs sm:text-sm text-neutral-400 mt-1.5 sm:mt-2 max-w-xl">
+            Signature fade cuts, straight-razor shaving, beard lineup, dreadlocks, hair color, and herbal champi massage.
+          </p>
+        </div>
+
+        <!-- Filter tabs -->
+        <div class="flex flex-wrap items-center gap-1.5 sm:gap-2" id="hair-filter-container">
+          <button onclick="filterHairServices('all', event)" class="hair-filter-btn px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-semibold bg-[#dfb776] text-black transition-all cursor-pointer">All Grooming</button>
+          <button onclick="filterHairServices('Haircuts & Locs', event)" class="hair-filter-btn px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-semibold bg-[#17171d] text-neutral-400 hover:text-white border border-neutral-800 transition-all cursor-pointer">Haircuts</button>
+          <button onclick="filterHairServices('Beard & Shave', event)" class="hair-filter-btn px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-semibold bg-[#17171d] text-neutral-400 hover:text-white border border-neutral-800 transition-all cursor-pointer">Beard & Shave</button>
+          <button onclick="filterHairServices('Spa & Treatments', event)" class="hair-filter-btn px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-semibold bg-[#17171d] text-neutral-400 hover:text-white border border-neutral-800 transition-all cursor-pointer">Head Massage</button>
+        </div>
+      </div>
+
+      <!-- Hair Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5" id="hair-services-grid"></div>
+
+      <!-- Show All Toggle -->
+      <div class="mt-8 sm:mt-10 flex flex-col items-center justify-center">
+        <button id="toggle-hair-btn" onclick="toggleHairServices()" class="inline-flex items-center gap-2 px-6 sm:px-7 py-2.5 sm:py-3 rounded-full bg-[#18181f] hover:bg-[#22222c] border border-[#dfb776]/40 text-white text-xs sm:text-sm font-bold tracking-wider shadow-lg transition-all cursor-pointer">
+          <i data-lucide="sparkles" class="w-4 h-4 text-[#dfb776]"></i>
+          <span id="toggle-hair-text">SHOW ALL GROOMING SERVICES</span>
+          <i data-lucide="chevron-down" id="toggle-hair-icon" class="w-4 h-4 text-[#dfb776]"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-14 sm:py-20 bg-[#0b0b0e] relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+        
+        <div class="lg:col-span-6 relative">
+          <div class="relative rounded-2xl overflow-hidden border border-[#dfb776]/40 shadow-2xl bg-neutral-900 glow-box-hover group">
+            <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=800&q=80" alt="SCISSOR Unisex Salon Experience" class="w-full h-auto aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-700 filter contrast-[1.05]">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0b0b0e]/85 via-transparent to-transparent"></div>
+            
+            <div class="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 bg-[#17171c]/95 backdrop-blur-md border border-[#dfb776]/40 rounded-xl p-2.5 sm:p-3 sm:px-4 flex items-center gap-2.5 sm:gap-3">
+              <div class="relative flex items-center justify-center">
+                <div class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-emerald-500"></div>
+                <div class="absolute w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-emerald-400 animate-ping opacity-75"></div>
+              </div>
+              <div>
+                <span class="text-[9px] sm:text-[10px] uppercase tracking-wider text-neutral-400 font-bold block">CURRENT STATUS</span>
+                <span class="text-[11px] sm:text-xs font-bold text-white flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3 h-3 text-[#dfb776]"></i>
+                  <span>Open Today: 08:00 AM - 09:00 PM</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1c1a17] border border-[#dfb776]/30 mb-2.5 sm:mb-3">
+            <i data-lucide="sparkles" class="w-3 h-3 text-[#dfb776]"></i>
+            <span class="text-[10px] sm:text-[11px] font-bold tracking-[0.2em] text-[#dfb776] uppercase">ABOUT SCISSOR SALON</span>
+          </div>
+          <h2 class="text-2xl sm:text-4xl md:text-5xl font-bold font-display text-white tracking-tight leading-[1.15] mb-3 sm:mb-4">
+            Where Craftsmanship Meets <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#dfb776] via-[#f7e0b5] to-[#dfb776]">Luxury Comfort</span>
+          </h2>
+          <p class="text-xs sm:text-sm md:text-base text-neutral-300 leading-relaxed mb-5 sm:mb-6">
+            Located conveniently on Kasia Bypass Road, SCISSOR Unisex Salon is Kushinagar's premier destination for modern hair styling, bridal makeovers, and rejuvenating skin treatments.
+          </p>
+          
+          <div class="space-y-2.5 sm:space-y-3">
+            <div class="flex items-center gap-3 p-2.5 sm:p-3 rounded-xl bg-[#141418] border border-neutral-800">
+              <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-[#202026] flex items-center justify-center text-[#dfb776]">
+                <i data-lucide="users" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-white">Unisex Salon with Dedicated Privacy Suites for Men & Women</span>
+            </div>
+            <div class="flex items-center gap-3 p-2.5 sm:p-3 rounded-xl bg-[#141418] border border-neutral-800">
+              <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-[#202026] flex items-center justify-center text-[#dfb776]">
+                <i data-lucide="shield-check" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-white">100% Sanitized Tools & Strict Hygiene Standards</span>
+            </div>
+            <div class="flex items-center gap-3 p-2.5 sm:p-3 rounded-xl bg-[#141418] border border-neutral-800">
+              <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-[#202026] flex items-center justify-center text-[#dfb776]">
+                <i data-lucide="wind" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-white">Fully Air Conditioned Modern Studio Ambience</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-14 sm:py-20 bg-[#0d0d10] border-t border-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1c1a17] border border-[#dfb776]/30 mb-2 sm:mb-3">
+          <i data-lucide="camera" class="w-3 h-3 text-[#dfb776]"></i>
+          <span class="text-[10px] sm:text-[11px] font-bold tracking-[0.2em] text-[#dfb776] uppercase">STUDIO & WORK GALLERY</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl md:text-5xl font-bold font-display text-white tracking-tight">
+          A Glimpse of <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#dfb776] via-[#f7e0b5] to-[#dfb776]">Our Salon</span>
+        </h2>
+        <p class="text-xs sm:text-sm text-neutral-400 mt-1.5 sm:mt-2.5">
+          Step into our welcoming space designed for comfort, relaxation, and styling.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4" id="gallery-grid"></div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <div class="py-10 sm:py-12 bg-[#0c0c0e]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-2xl bg-gradient-to-r from-[#17171c] via-[#141418] to-[#1e1416] border border-neutral-800 p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-5 sm:gap-6 shadow-2xl">
+        <div class="flex items-center gap-4 sm:gap-5">
+          <div class="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-[#202026] border border-[#dfb776]/40 flex items-center justify-center text-[#dfb776] shrink-0">
+            <i data-lucide="calendar" class="w-6 h-6 sm:w-8 sm:h-8"></i>
+          </div>
+          <div>
+            <h3 class="text-lg sm:text-2xl font-bold font-display text-white">Ready for Your Next Look?</h3>
+            <p class="text-xs sm:text-sm text-neutral-400 mt-0.5 sm:mt-1">Book your appointment now and let our certified salon experts pamper you.</p>
+          </div>
+        </div>
+        <button onclick="openBookingModal()" class="w-full md:w-auto bg-[#B91C1C] hover:bg-[#a01818] text-white text-xs sm:text-sm font-bold tracking-wider px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl shadow-[0_0_25px_rgba(185,28,28,0.5)] transition-all cursor-pointer">
+          BOOK APPOINTMENT
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md hidden">
+    <div class="relative max-w-4xl w-full flex flex-col items-center">
+      <button onclick="closeLightbox()" class="absolute -top-10 right-0 text-white hover:text-[#dfb776] p-1 cursor-pointer">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+      <div class="relative w-full rounded-2xl overflow-hidden border border-neutral-700 bg-black">
+        <img id="lightbox-img" src="" alt="Gallery Image" class="w-full max-h-[75vh] object-contain mx-auto">
+      </div>
+      <div class="mt-3 flex items-center justify-between w-full text-sm">
+        <div>
+          <span id="lightbox-tag" class="text-[10px] font-bold bg-[#B91C1C] px-2 py-0.5 rounded-full text-white mr-2"></span>
+          <span id="lightbox-title" class="font-bold text-white text-xs sm:text-sm"></span>
+        </div>
+        <button onclick="closeLightbox(); openBookingModal();" class="bg-[#dfb776] text-black font-bold px-3 py-1 rounded-lg text-xs hover:bg-[#edd29b] cursor-pointer">
+          Book This Style
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Booking Modal -->
+  <div id="booking-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-sm hidden">
+    <div class="bg-[#141418] border border-neutral-800 rounded-2xl max-w-lg w-full p-5 sm:p-7 relative shadow-2xl">
+      <button onclick="closeBookingModal()" class="absolute top-4 right-4 text-neutral-400 hover:text-white cursor-pointer p-1">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      
+      <div class="flex items-center gap-2.5 mb-4 pb-3 border-b border-neutral-800">
+        <div class="w-8 h-8 rounded-xl bg-[#202026] border border-[#dfb776]/40 flex items-center justify-center text-[#dfb776]">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+        </div>
+        <div>
+          <h3 class="text-base sm:text-lg font-bold text-white font-display">Book an Appointment</h3>
+          <p class="text-[11px] sm:text-xs text-neutral-400">Direct booking on WhatsApp</p>
+        </div>
+      </div>
+
+      <form id="booking-form" onsubmit="handleBookingSubmit(event)" class="space-y-3.5">
+        <div>
+          <label class="block text-xs font-semibold text-neutral-300 mb-1">Your Full Name *</label>
+          <input type="text" id="cust-name" required placeholder="e.g. Rahul Sharma" class="w-full px-3.5 py-2 sm:py-2.5 rounded-xl bg-[#1c1c24] border border-neutral-700 text-white text-xs sm:text-sm focus:border-[#dfb776] outline-none">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-neutral-300 mb-1">Phone Number *</label>
+          <input type="tel" id="cust-phone" required placeholder="e.g. 9876543210" class="w-full px-3.5 py-2 sm:py-2.5 rounded-xl bg-[#1c1c24] border border-neutral-700 text-white text-xs sm:text-sm focus:border-[#dfb776] outline-none">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-neutral-300 mb-1">Select Service *</label>
+          <select id="cust-service" required class="w-full px-3.5 py-2 sm:py-2.5 rounded-xl bg-[#1c1c24] border border-neutral-700 text-white text-xs sm:text-sm focus:border-[#dfb776] outline-none">
+          </select>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-semibold text-neutral-300 mb-1">Preferred Date *</label>
+            <input type="date" id="cust-date" required class="w-full px-3.5 py-2 sm:py-2.5 rounded-xl bg-[#1c1c24] border border-neutral-700 text-white text-xs sm:text-sm focus:border-[#dfb776] outline-none">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-neutral-300 mb-1">Preferred Time *</label>
+            <input type="time" id="cust-time" required value="11:00" class="w-full px-3.5 py-2 sm:py-2.5 rounded-xl bg-[#1c1c24] border border-neutral-700 text-white text-xs sm:text-sm focus:border-[#dfb776] outline-none">
+          </div>
+        </div>
+
+        <button type="submit" class="w-full mt-4 bg-[#B91C1C] hover:bg-[#a01818] text-white text-xs sm:text-sm font-bold tracking-wider py-3.5 rounded-xl shadow-[0_0_20px_rgba(185,28,28,0.55)] transition-all cursor-pointer flex items-center justify-center gap-2">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>CONFIRM & SEND ON WHATSAPP</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Floating Quick Actions -->
+  <div class="fixed bottom-5 right-5 z-40 flex flex-col items-end gap-2.5">
+    <a href="https://wa.me/918318248504?text=Hello%20SCISSOR%20Salon!%20I%20would%20like%20to%20inquire%20about%20your%20services." target="_blank" class="w-12 h-12 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-[0_4px_20px_rgba(37,211,102,0.5)] transition-all hover:scale-110 cursor-pointer" title="Chat on WhatsApp">
+      <i data-lucide="message-circle" class="w-6 h-6"></i>
+    </a>
+    <button id="scroll-top-btn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="w-10 h-10 rounded-full bg-[#181820] border border-neutral-700 text-[#dfb776] flex items-center justify-center shadow-lg transition-all hover:scale-110 cursor-pointer opacity-0 pointer-events-none">
+      <i data-lucide="arrow-up" class="w-4 h-4"></i>
+    </button>
+  </div>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-[#08080a] border-t border-neutral-900 py-10 sm:py-14 text-xs text-neutral-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-8">
+        <div>
+          <div class="flex items-center gap-2 mb-2">
+            <i data-lucide="scissors" class="w-4 h-4 text-[#dfb776]"></i>
+            <span class="text-base font-bold font-cinzel text-white">SCISSOR UNISEX SALON</span>
+          </div>
+          <p class="text-neutral-400 leading-relaxed mb-3">
+            Kushinagar's finest unisex hair, beauty, bridal and grooming destination.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-xs sm:text-sm font-bold text-white mb-2 uppercase tracking-wider">Salon Timings</h4>
+          <p class="text-neutral-300">Monday – Sunday: <span class="text-[#dfb776] font-bold">08:00 AM – 09:00 PM</span></p>
+        </div>
+
+        <div>
+          <h4 class="text-xs sm:text-sm font-bold text-white mb-2 uppercase tracking-wider">Location & Contact</h4>
+          <p class="text-neutral-300">Kasia Bypass Road, Opp. SBI ATM, Kushinagar</p>
+          <p class="text-[#dfb776] font-bold mt-1">Call: +91 83182 48504</p>
+        </div>
+      </div>
+
+      <div class="pt-6 border-t border-neutral-900 text-center text-neutral-600 text-[11px]">
+        <p>© 2026 SCISSOR Unisex Salon. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- App Script -->
+  <script src="./app.js"></script>
+</body>
+</html>

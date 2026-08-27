@@ -1,6 +1,0 @@
-{
-  "name": "SCISSOR Unisex Salon",
-  "description": "Premium Hair, Beauty & Grooming Experience for Men & Women with online booking, service menu, gallery, and contact information.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
